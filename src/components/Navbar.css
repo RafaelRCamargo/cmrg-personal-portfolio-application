@@ -169,3 +169,13 @@
     margin-left: 28px;
   }
 }
+
+.fa-ellipsis-v,
+.fa-times {
+  width: 30px;
+  height: 30px;
+}
+
+.fa-times {
+  margin-left: -4px;
+}

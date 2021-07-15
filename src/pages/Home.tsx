@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 
-import { Canvas } from '@react-three/fiber'
+import { Canvas } from "@react-three/fiber";
 
 import Box from "../components/Box";
 import "./Home.css";
@@ -17,11 +17,10 @@ let Home = () => {
         {/*An directional light which aims form the given position */}
         {/*An point light, basically the same as directional. This one points from under */}
         <pointLight position={[0, -10, 5]} intensity={1} />
+        <pointLight position={[0, 10, 5]} intensity={1} />
       </Canvas>
     </div>
   );
 };
 
 export default Home;
-
-
