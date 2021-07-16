@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+
+import { useSpring, animated } from "react-spring/three";
 // import { TextureLoader } from 'three/src/loaders/TextureLoader.js';
 
 function Box(props) {
@@ -8,16 +10,7 @@ function Box(props) {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  /* Textures */
-  /*
-    const [colorMap, displacementMap, normalMap, metallicMap, roughnessMap] = useLoader(TextureLoader, [
-        'textures/MetalPlates008_2K_Color.jpg',
-        'textures/MetalPlates008_2K_Displacement.jpg',
-        'textures/MetalPlates008_2K_Normal.jpg',
-        'textures/MetalPlates008_2K_Metalness.jpg',
-        'textures/MetalPlates008_2K_Roughness.jpg',
-    ])
-    */
+  const [scale, setScale] = useState([2, 0, 2]);
 
   /* Rotate */
   useFrame((state, delta) => {
@@ -25,19 +18,25 @@ function Box(props) {
     mesh.current.rotation.y += 0.005;
   });
 
+  useEffect(() => {
+    {
+      active ? setScale([2, 0, 2]) : setScale([2, 20, 2]);
+    }
+  }, [active]);
+
   //<meshStandardMaterial color={hovered ? '#d95043' : '#221826'} />
 
   return (
-    <mesh
+    <animated.mesh
       {...props}
       visible
       ref={mesh}
-      scale={active ? 1.8 : 1}
+      scale={active ? 1.2 : 1}
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
     >
-      <icosahedronGeometry args={[2, 0, 2]} attach="geometry" />
+      <icosahedronGeometry args={scale} attach="geometry" />
       <meshStandardMaterial
         attach="material"
         color="#d95043"
@@ -46,7 +45,7 @@ function Box(props) {
         metalness={0.1}
       />
       <OrbitControls />
-    </mesh>
+    </animated.mesh>
   );
 }
 
