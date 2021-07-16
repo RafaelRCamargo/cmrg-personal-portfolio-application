@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@react-spring/animated": "9.2.4",
+    "@react-spring/core": "9.2.4",
     "@react-spring/three": "9.2.4",
     "@react-three/drei": "^7.1.1",
     "@react-three/fiber": "^7.0.5",
@@ -20,7 +21,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spring": "9.2.4",
-    "react-spring-tree": "0.1.1",
     "three": "^0.130.1",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
