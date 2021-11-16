@@ -1,0 +1,161 @@
+.hero-container {
+  padding: 0 108px;
+  height: 96vh;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  .start-col {
+    width: 50%;
+    max-width: 750px;
+  }
+
+  .main-title {
+    .title {
+      color: var(--black);
+      max-width: 750px;
+      height: 155px;
+
+      font-size: 14rem;
+      font-weight: 700;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .main-description {
+    width: 420px;
+    padding: 16px 0 0 80px;
+
+    position: relative;
+
+    &:after {
+      content: "try to change things";
+      position: absolute;
+      font-size: 2.4em;
+      color: var(--accent);
+      font-weight: 900;
+      top: -136px;
+      left: 80px;
+    }
+
+    .description {
+      color: var(--black);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      height: 80px;
+
+      span {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        .cool-word {
+          opacity: 0;
+          animation: cool-word 6s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        }
+      }
+    }
+  }
+}
+
+// keyframe animation for the cool word to appear and disappear
+@keyframes cool-word {
+  0% {
+    text-transform: uppercase;
+    font-style: normal;
+    opacity: 0;
+  }
+  10% {
+    text-transform: lowercase;
+    font-style: normal;
+    opacity: 1;
+  }
+  90% {
+    font-style: normal;
+    opacity: 1;
+  }
+  100% {
+    font-style: italic;
+    opacity: 0;
+  }
+}
+
+.end-col {
+  margin: auto;
+  padding: 4rem 4rem;
+  background-color: transparent;
+  .text-editor {
+    width: 500px;
+    max-width: 500px;
+    .css {
+      font-size: 3rem;
+      color: var(--black);
+      line-height: 40px;
+      font-weight: 900;
+    }
+    .css-tag {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .css-comment {
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: var(--black);
+      opacity: 0.5;
+    }
+    .css-line {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      .css-tag {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+      .css-value {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .css-input-container {
+          display: flex;
+
+          &::before {
+            content: "#";
+            color: var(--black);
+          }
+
+          .css-value-input {
+            width: 120px;
+            border: none;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--black);
+            background-color: transparent;
+            text-align: left;
+            line-height: 40px;
+          }
+        }
+
+        .sample-box {
+          border: 2px solid var(--accent);
+        }
+      }
+    }
+  }
+}
+
+.var--background {
+  margin-left: 24px;
+}

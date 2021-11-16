@@ -1,0 +1,103 @@
+.works-container {
+  .works-title {
+    width: 100%;
+    text-align: center;
+    .works-title-text {
+      text-transform: capitalize;
+      font-family: "Playfair Display", sans-serif;
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+
+        left: 57%;
+        bottom: -1.2rem;
+
+        transform: translate(-57%, 0);
+
+        background-color: var(--accent);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 2px;
+
+        right: 51%;
+        top: -1.2rem;
+
+        transform: translate(-51%, 0);
+
+        background-color: var(--accent);
+      }
+    }
+  }
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 108px;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  .work-start-col {
+    width: 500px;
+    .work-title {
+      text-transform: capitalize;
+      font-family: "Playfair Display", sans-serif;
+      font-size: 5rem;
+      font-weight: 800;
+      margin-bottom: 3rem;
+
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 2px;
+
+        left: -5%;
+        bottom: -1.2rem;
+
+        background-color: var(--accent);
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        &::after {
+          height: 136%;
+          z-index: -1;
+          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+      }
+    }
+    .work-content {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    .work-image {
+      width: 500px;
+      .Reveal_Reveal__1_Q0E {
+        align-items: baseline;
+        height: min-content !important;
+      }
+    }
+  }
+}

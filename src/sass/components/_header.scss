@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+  width: 100%;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  font-size: 2rem;
+  height: 156px;
+  display: flex;
+  justify-content: center;
+  padding: 0 108px;
+  color: var(--black);
+  @media (max-width: $layout-breakpoint-medium) {
+    padding: 0 72px;
+    font-size: 1.6rem;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 12px;
+    height: 96px;
+    font-size: 1.2rem;
+  }
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      font-weight: 700;
+      font-size: 3.8rem;
+      cursor: pointer;
+      @media (max-width: $layout-breakpoint-medium) {
+        font-size: 3.2rem;
+        flex: 4;
+      }
+    }
+    .nav {
+      @media (max-width: $layout-breakpoint-medium) {
+        display: none;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      li {
+        font-size: 2rem;
+        text-transform: lowercase;
+        list-style: none;
+        margin: 0 40px;
+        a {
+          text-decoration: none;
+          color: var(--black);
+          font-weight: 500;
+          white-space: nowrap;
+        }
+      }
+    }
+    .contact {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      @media (max-width: $layout-breakpoint-medium) {
+        flex: 1;
+      }
+      a {
+        padding: 0 1.4rem;
+        color: var(--black);
+        font-weight: 800;
+        letter-spacing: -0.4px;
+        text-decoration: none;
+        padding-bottom: 12px;
+        white-space: nowrap;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        @media (max-width: $layout-breakpoint-xsmall) {
+          border: none;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -50%;
+        width: 100%;
+        height: 200%;
+        background: var(--black);
+        transform: scaleY(0.03);
+        transform-origin: bottom;
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: -1;
+      }
+      &:hover {
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        a {
+          color: var(--white);
+          transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        &:after {
+          transform: scaleY(1);
+        }
+      }
+    }
+    .hamburger-menu {
+      height: 56px;
+      width: 56px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+      cursor: pointer;
+      &:hover {
+        background: var(--black);
+      }
+      @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+      }
+      span {
+        width: 20px;
+        height: 3px;
+        margin: 2px 0;
+        background: var(--black);
+        display: block;
+      }
+    }
+  }
+}

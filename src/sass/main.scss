@@ -1,0 +1,74 @@
+@import "global/variables";
+@import "base/global";
+@import "base/reset";
+@import "base/typography";
+
+@import "components/header";
+@import "components/banner";
+@import "components/marquee";
+@import "components/loader";
+@import "components/hero";
+@import "components/social";
+@import "components/works";
+
+::selection {
+  color: var(--accent);
+  background-color: transparent;
+}
+
+/* * {
+  cursor: none;
+} */
+
+body {
+  overflow-x: hidden;
+}
+
+.circle {
+  position: relative;
+  z-index: 999999;
+
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+
+  inset: 0;
+
+  height: 10px;
+  width: 10px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+  text-align: center;
+  font-size: 16px;
+  background: #fff;
+  mix-blend-mode: exclusion;
+}
+
+.outside-circle {
+  position: absolute;
+  z-index: 999999;
+
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+
+  inset: 0;
+
+  height: 10px;
+  width: 10px;
+
+  padding: 0.8rem;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+  text-align: center;
+  font-size: 16px;
+  background: transparent;
+  border: 2px solid #fff;
+  mix-blend-mode: exclusion;
+}

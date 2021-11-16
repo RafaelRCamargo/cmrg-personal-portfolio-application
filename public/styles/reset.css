@@ -1,0 +1,37 @@
+:root {
+  --background: #f0f1f2;
+  --white: #f0f1f2;
+  --black: #222326;
+  --accent: #732c32;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-transform: lowercase;
+}
+
+p {
+  text-transform: none;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #fefefe;
+  color: #161616;
+}
+
+button,
+input,
+a {
+  outline: none;
+}
+
+canvas {
+  image-rendering: auto;
+}
