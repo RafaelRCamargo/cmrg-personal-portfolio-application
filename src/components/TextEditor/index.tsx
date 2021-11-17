@@ -6,8 +6,10 @@ const TextEditor = () => {
   return (
     <div className="text-editor">
       <span className="css">
-        <span className="css-tag">:root</span> {"{"}
+        <CssComment title={"Hey, you may change things here!"} />
+        <CssComment title={"No worries."} />
         <br />
+        <span className="css-tag">:root</span> {"{"}
         <div className="var--background">
           <CssComment title={"Main Black Color"} />
           <CssColorInput color={`black`} />

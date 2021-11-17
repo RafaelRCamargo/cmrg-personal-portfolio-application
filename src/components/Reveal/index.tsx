@@ -37,7 +37,7 @@ const getFittedDimensions = ({ parent, child }: any) => {
   }
 };
 
-function Reveal({ displacement, img1, img2 }: any) {
+function Reveal({ size, displacement, img1, img2 }: any) {
   const canvasRef = useRef<any>();
   const revealRef = useRef<any>();
   const sizeConstraintRef = useRef<any>();
@@ -51,8 +51,10 @@ function Reveal({ displacement, img1, img2 }: any) {
 
       const { width, height } = getFittedDimensions({ parent, child });
 
-      sizeConstraintRef.current.style.width = width + "px";
-      sizeConstraintRef.current.style.height = height + "px";
+      sizeConstraintRef.current.style.width = size ? size + "px" : width + "px";
+      sizeConstraintRef.current.style.height = size
+        ? size + "px"
+        : height + "px";
 
       new hoverEffect({
         parent: canvasRef.current,
@@ -68,9 +70,21 @@ function Reveal({ displacement, img1, img2 }: any) {
   }, [img1, img2, canvasRef, sizeConstraintRef, displacement]);
 
   return (
-    <div ref={revealRef} className={styles.Reveal}>
-      <div ref={sizeConstraintRef} className={styles.SizeConstraint}>
-        <div ref={canvasRef} className={styles.Canvas}></div>
+    <div
+      ref={revealRef}
+      className={styles.Reveal + " " + "about-image"}
+      style={{ width: size, height: size }}
+    >
+      <div
+        ref={sizeConstraintRef}
+        className={styles.SizeConstraint}
+        style={{ width: size, height: size }}
+      >
+        <div
+          ref={canvasRef}
+          className={styles.Canvas}
+          style={{ width: size, height: size }}
+        ></div>
       </div>
     </div>
   );

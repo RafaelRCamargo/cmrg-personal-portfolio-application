@@ -61,7 +61,7 @@ const Loader = ({ setLoading }: { setLoading: (value: boolean) => void }) => {
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
-            src={process.env.PUBLIC_URL + `/images/work/image-1.png`}
+            src={process.env.PUBLIC_URL + `/images/me/image-1.png`}
           />
         </motion.div>
         <ImageBlock variants={item} id="image-2" />

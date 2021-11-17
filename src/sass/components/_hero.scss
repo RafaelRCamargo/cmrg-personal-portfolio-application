@@ -15,6 +15,7 @@
   .main-title {
     .title {
       color: var(--black);
+      width: max-content;
       max-width: 750px;
       height: 155px;
 
@@ -23,6 +24,12 @@
 
       overflow: hidden;
       text-overflow: ellipsis;
+
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      &:hover {
+        transform: skewX(-20deg);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
     }
   }
   .main-description {
@@ -32,13 +39,17 @@
     position: relative;
 
     &:after {
-      content: "try to change things";
+      content: "full-stack developer";
       position: absolute;
       font-size: 2.4em;
       color: var(--accent);
       font-weight: 900;
       top: -136px;
       left: 80px;
+
+      opacity: 0;
+      animation: slip-in 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+        1000ms;
     }
 
     .description {
@@ -61,6 +72,18 @@
         }
       }
     }
+  }
+}
+
+//animation keyframe to animate text entrace from bottom to top
+@keyframes slip-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

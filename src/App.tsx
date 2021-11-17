@@ -7,7 +7,7 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { CursorProvider } from "./context/UserContext";
 
 // Components
-import CustomCursor from "./components/CustomCursor";
+import CustomCursor from "./components/Misc/CustomCursor";
 import Loader from "./components/Loader";
 import Home from "./components/Home";
 

@@ -8,8 +8,9 @@ import displacement from "./assets/displacement.jpg"; */
 import TextEditor from "../TextEditor";
 
 const coolWords = [
-  "um desenvolvedor full-stack, apaixonado por web moderna.",
-  "um estudante curioso, se parecer difícil e desconhecido melhor ainda.",
+  "Gosto de criar experiências sólidas e escaláveis, com as tecnologias mais modernas do mercado.",
+  "Desenvolvendo soluções, dos problemas mais simples aos que nem existem ainda!",
+  "Estudante curioso, sempre em busca de algo novo e inexplorado.",
 ];
 
 const Hero = () => {
@@ -22,21 +23,21 @@ const Hero = () => {
     }, 100);
     setTimeout(() => {
       titleRef!.current!.innerText += "m";
-    }, 200);
-    setTimeout(() => {
-      titleRef!.current!.innerText += "r";
     }, 300);
     setTimeout(() => {
+      titleRef!.current!.innerText += "r";
+    }, 600);
+    setTimeout(() => {
       titleRef!.current!.innerText += "g";
-    }, 400);
+    }, 900);
     setTimeout(() => {
       titleRef!.current!.click();
-    }, 500);
+    }, 1200);
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      setSelected(selected ? 0 : 1);
-    }, 9000);
+      setSelected(selected < coolWords.length - 1 ? selected + 1 : 0);
+    }, 10000);
   }, [selected]);
 
   return (
