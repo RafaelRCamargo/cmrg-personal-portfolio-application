@@ -57,7 +57,7 @@ const Works = () => {
       <div className="link">
         <a
           className="portfolio-link"
-          href="https://drive.google.com/drive/u/0/folders/1OObgXTmHF_o0ycI8e4d2SGgFqc16ttMD"
+          href="https://drive.google.com/drive/folders/1KEP6WPx6tpUf-D-SSZtruKbmCOpx_-Ha?usp=sharing"
         >
           Portfólio Completo!
         </a>
