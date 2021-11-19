@@ -45,7 +45,9 @@ const Hero = () => {
             className="title"
             contentEditable="true"
             spellCheck="false"
-          ></h1>
+          >
+            ...
+          </h1>
         </div>
         <div className="main-description">
           <p className="description">
