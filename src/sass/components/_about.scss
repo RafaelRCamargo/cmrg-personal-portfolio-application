@@ -68,15 +68,16 @@
 }
 
 .job-container {
-  height: 50vh;
+  height: 58vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0 108px;
   justify-content: flex-start;
   align-items: baseline;
   .job-content {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    height: 180px;
   }
   .job-title {
     text-transform: capitalize;
@@ -101,6 +102,7 @@
 .tools-content {
   display: flex;
   flex-direction: column;
+  place-self: end;
   .tools-title {
     width: 700px;
     text-transform: capitalize;
@@ -117,6 +119,7 @@
     gap: 4rem;
     margin-left: 2rem;
     ul {
+      width: 300px;
       line-height: 30px;
       ::marker {
         content: ">";
@@ -126,7 +129,17 @@
         padding-left: 6px;
         font-size: 2rem;
         text-transform: capitalize;
+        transition: 0.3s;
+        &:hover {
+          font-weight: 900;
+          transition: 0.3s;
+        }
       }
     }
   }
+}
+
+.Reveal_Reveal__1_Q0E {
+  width: 500px;
+  height: 500px;
 }

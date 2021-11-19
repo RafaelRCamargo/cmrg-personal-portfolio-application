@@ -12,6 +12,11 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  text-align: center;
+  justify-content: center !important;
+  align-items: center !important;
+  place-self: center !important;
+  gap: 4rem;
 }
 
 p {

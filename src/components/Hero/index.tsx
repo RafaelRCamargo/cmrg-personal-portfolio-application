@@ -2,9 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import Reveal from "../Reveal";
 
 // Hover Images
-/* import image1 from "./assets/me-0.png";
-import image2 from "./assets/me-1.png";
-import displacement from "./assets/displacement.jpg"; */
 import TextEditor from "../TextEditor";
 
 const coolWords = [
@@ -72,7 +69,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="end-col">
-        {/* <Reveal displacement={displacement} img1={image1} img2={image2} /> */}
         <TextEditor />
       </div>
     </div>

@@ -39,7 +39,7 @@ const About = () => {
         ) : (
           <div className="about-image">
             <Reveal
-              size={"500"}
+              size={400}
               img1={image1}
               img2={image2}
               displacement={displacement}

@@ -18,7 +18,12 @@ const Work = ({
       </div>
       <div className="work-end-col">
         <div className="work-image">
-          <Reveal img1={images[0]} img2={images[1]} displacement={images[2]} />
+          <Reveal
+            size={400}
+            img1={images[0]}
+            img2={images[1]}
+            displacement={images[2]}
+          />
         </div>
       </div>
     </div>

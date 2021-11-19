@@ -6,8 +6,8 @@ const TextEditor = () => {
   return (
     <div className="text-editor">
       <span className="css">
-        <CssComment title={"Hey, you may change things here!"} />
-        <CssComment title={"No worries."} />
+        <CssComment title={"Olá, você pode mudar as coisas aqui!"} />
+        <CssComment title={"Sem medo."} />
         <br />
         <span className="css-tag">:root</span> {"{"}
         <div className="var--background">

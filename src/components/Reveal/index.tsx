@@ -51,7 +51,9 @@ function Reveal({ size, displacement, img1, img2 }: any) {
 
       const { width, height } = getFittedDimensions({ parent, child });
 
-      sizeConstraintRef.current.style.width = size ? size + "px" : width + "px";
+      sizeConstraintRef.current.style.width = size
+        ? size * 1.777 + "px"
+        : width + "px";
       sizeConstraintRef.current.style.height = size
         ? size + "px"
         : height + "px";
@@ -72,18 +74,18 @@ function Reveal({ size, displacement, img1, img2 }: any) {
   return (
     <div
       ref={revealRef}
-      className={styles.Reveal + " " + "about-image"}
-      style={{ width: size, height: size }}
+      className={styles.Reveal}
+      style={{ width: size * 1.777, height: size }}
     >
       <div
         ref={sizeConstraintRef}
         className={styles.SizeConstraint}
-        style={{ width: size, height: size }}
+        style={{ width: size * 1.777, height: size }}
       >
         <div
           ref={canvasRef}
           className={styles.Canvas}
-          style={{ width: size, height: size }}
+          style={{ width: size * 1.777, height: size }}
         ></div>
       </div>
     </div>
