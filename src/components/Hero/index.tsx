@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Reveal from "../Reveal";
 
 // Hover Images
 import TextEditor from "../TextEditor";

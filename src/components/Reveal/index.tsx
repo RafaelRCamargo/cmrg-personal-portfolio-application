@@ -69,7 +69,7 @@ function Reveal({ size, displacement, img1, img2 }: any) {
     };
 
     run();
-  }, [img1, img2, canvasRef, sizeConstraintRef, displacement]);
+  }, [img1, img2, canvasRef, sizeConstraintRef, displacement, size]);
 
   return (
     <div
